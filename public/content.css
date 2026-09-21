@@ -1,0 +1,20 @@
+/*
+ * Styling for replaced prices.
+ *
+ * Deliberately minimal: the replacement sits in someone else's layout and
+ * must inherit its surroundings. Only the optional highlight adds anything
+ * visible, and it uses text decoration rather than box properties so it
+ * cannot change how the page is laid out.
+ */
+
+.pcx-price {
+  /* Keep the number, unit and ticker from being split across lines. */
+  white-space: nowrap;
+}
+
+.pcx-price--highlight {
+  text-decoration: underline dotted currentColor;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+  cursor: help;
+}

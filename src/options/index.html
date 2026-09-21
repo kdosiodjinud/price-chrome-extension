@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title data-i18n="options.title">Settings</title>
+    <link rel="stylesheet" href="./options.css" />
+  </head>
+  <body>
+    <main class="page">
+      <h1 data-i18n="options.heading">Settings</h1>
+
+      <section class="card">
+        <h2 data-i18n="options.section.general">General</h2>
+
+        <div class="field field--switch">
+          <label class="switch">
+            <input type="checkbox" id="enabled" />
+            <span data-i18n="options.enabled">Convert prices on pages</span>
+          </label>
+          <p class="hint" data-i18n="options.enabled.hint"></p>
+        </div>
+
+        <div class="field">
+          <label for="language" data-i18n="options.language">Language</label>
+          <select id="language"></select>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="options.section.display">Display</h2>
+
+        <div class="field">
+          <label for="commodity" data-i18n="options.commodity">Convert prices to</label>
+          <select id="commodity"></select>
+        </div>
+
+        <div class="field">
+          <label for="unit" data-i18n="options.unit">Weight unit</label>
+          <select id="unit"></select>
+        </div>
+
+        <div class="field">
+          <label for="decimals" data-i18n="options.decimals">Decimal places</label>
+          <select id="decimals"></select>
+        </div>
+
+        <div class="field">
+          <label for="labelStyle" data-i18n="options.labelStyle">Metal label</label>
+          <select id="labelStyle"></select>
+        </div>
+
+        <div class="field field--switch">
+          <label class="switch">
+            <input type="checkbox" id="showOriginalInTooltip" />
+            <span data-i18n="options.tooltip">Show the original price on hover</span>
+          </label>
+          <p class="hint" data-i18n="options.tooltip.hint"></p>
+        </div>
+
+        <div class="field field--switch">
+          <label class="switch">
+            <input type="checkbox" id="highlightConverted" />
+            <span data-i18n="options.highlight">Underline converted prices</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="options.section.currencies">Detected currencies</h2>
+        <p class="hint" data-i18n="options.currencies.hint"></p>
+        <div class="checklist" id="currencies"></div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="options.section.sites">Sites</h2>
+        <div class="field">
+          <label for="blockedHosts" data-i18n="options.blocklist"></label>
+          <p class="hint" data-i18n="options.blocklist.hint"></p>
+          <textarea id="blockedHosts" rows="5" spellcheck="false"></textarea>
+          <p class="hint hint--warning" id="blocklistWarning" hidden></p>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 data-i18n="options.section.data">Rate data</h2>
+
+        <div class="field">
+          <p class="hint" id="sourceHint"></p>
+          <p><a id="sourceLink" target="_blank" rel="noopener noreferrer"></a></p>
+        </div>
+
+        <dl class="status">
+          <dt data-i18n="options.lastUpdate">Last updated</dt>
+          <dd id="lastUpdate">—</dd>
+          <dt data-i18n="options.nextUpdate">Cache valid until</dt>
+          <dd id="nextUpdate">—</dd>
+        </dl>
+
+        <div class="actions">
+          <button type="button" id="refresh" data-i18n="options.refresh">Refresh now</button>
+          <button type="button" id="clearCache" class="secondary" data-i18n="options.clearCache">
+            Clear cache
+          </button>
+        </div>
+        <p class="hint" data-i18n="options.clearCache.hint"></p>
+
+        <p class="disclaimer" data-i18n="options.source.disclaimer"></p>
+      </section>
+
+      <p class="toast" id="toast" role="status" aria-live="polite" hidden></p>
+    </main>
+
+    <script type="module" src="./options.ts"></script>
+  </body>
+</html>

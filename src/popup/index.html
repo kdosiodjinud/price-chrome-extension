@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title data-i18n="popup.title">Price in Metal</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <div class="popup">
+      <h1 data-i18n="popup.title">Price in Metal</h1>
+
+      <p class="rate" id="rate">—</p>
+
+      <label class="switch">
+        <input type="checkbox" id="globalToggle" />
+        <span id="globalToggleLabel"></span>
+      </label>
+
+      <label class="switch" id="siteToggleRow">
+        <input type="checkbox" id="siteToggle" />
+        <span id="siteToggleLabel"></span>
+      </label>
+
+      <p class="state" id="state"></p>
+
+      <button type="button" id="openOptions" data-i18n="popup.openOptions">Settings</button>
+    </div>
+    <script type="module" src="./popup.ts"></script>
+  </body>
+</html>
