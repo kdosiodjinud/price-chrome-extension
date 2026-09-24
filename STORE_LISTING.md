@@ -88,6 +88,34 @@ with `npm run icons`.
 > None. All code is bundled in the package, and the extension's content
 > security policy blocks anything else.
 
+## Privacy practices tab
+
+Answers for the "Privacy practices" tab in the Developer Dashboard. They must
+match `PRIVACY.md`.
+
+**Single purpose:**
+> Converts prices displayed on web pages into an equivalent weight of a
+> precious metal.
+
+**Privacy policy URL:**
+> `https://github.com/kdosiodjinud/price-chrome-extension/blob/main/PRIVACY.md`
+
+**Data usage — "What user data do you plan to collect?":** tick nothing. The
+extension collects none of the listed categories (personally identifiable
+information, health, financial and payment, authentication, personal
+communications, location, web history, user activity, website content).
+Page text is processed locally and never transmitted.
+
+**Certifications:** tick all three.
+> - I do not sell or transfer user data to third parties, outside of the
+>   approved use cases.
+> - I do not use or transfer user data for purposes that are unrelated to my
+>   item's single purpose.
+> - I do not use or transfer user data to determine creditworthiness or for
+>   lending purposes.
+
+**Remote code:** No, I am not using remote code.
+
 ## Pre-submission checklist
 
 - [ ] `npm run lint` passes
@@ -95,5 +123,8 @@ with `npm run icons`.
 - [ ] Version in `package.json` bumped (the build propagates it to the manifest)
 - [ ] Screenshots retaken if the UI changed (1280×800 or 640×400)
 - [ ] Store icon regenerated if the artwork changed (`npm run icons`)
-- [ ] `PRIVACY.md` published at a public URL and linked in the listing
+- [ ] `PRIVACY.md` reachable **without signing in** at the URL entered in
+      the Developer Dashboard (the repository must be public, or the file
+      hosted elsewhere). Link the file itself, not the repository home page:
+      the review treats a repository or owner site as "not a privacy policy".
 - [ ] Single purpose statement matches the description above

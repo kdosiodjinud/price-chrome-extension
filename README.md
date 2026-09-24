@@ -58,7 +58,7 @@ clear the cache on demand.
 
 The extension sends no data anywhere. It reads page text locally to find prices
 and talks to exactly one external host, Yahoo Finance, to fetch rates — without
-cookies, and at most once every six hours. See [PRIVACY.md](PRIVACY.md).
+cookies, and at most once every six hours. See [PRIVACY.md](PRIVACY.md) and [TERMS_OF_USE.md](TERMS_OF_USE.md).
 
 ## Contributing
 
@@ -68,4 +68,4 @@ registry entry.
 
 ## Licence
 
-MIT
+MIT — see [LICENSE](LICENSE).
